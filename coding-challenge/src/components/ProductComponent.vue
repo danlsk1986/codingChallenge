@@ -9,7 +9,7 @@
                 <img src="../assets/product-pics/iPhone8-x1.png" alt="iPhone8">
             </div>            
             <div class="cardDescription">
-                <p>Phones</p>
+                <p>Phones</p>                
                 <p>iPhone 8</p>
             </div>
         </div>
@@ -221,7 +221,36 @@
 </template>
 
 <script>
+
+const products = 'https://coding-challenge-api.aerolab.co/products';
+let token= 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZDFhNGI0YWVhOTI1NTAwN2E2Yjk0OGYiLCJpYXQiOjE1NjIwMDQyOTh9.gUz9KOL99r9n3DjBhRrwoqtX10W03GxjbzL0SdacaCA'
+
+
+fetch(products, {
+    method: 'GET',
+    headers: {
+        'Authorization': token
+    }
+})
+.then(response => response.json())
+.then(data=> {
+    let productCategory = data[0].category;
+    let productName = data[0].name;
+    let productCost = data[0].cost;
+    let productImage = data[0].img.url;
+    let productId = data[0]._id;
+
+    console.log(productCategory);
+    console.log(productName);
+    console.log(productCost);
+    console.log(productImage);
+    console.log(productId);
+})
+
+
 export default {
-    name: 'ProductComponent'
+    name: 'ProductComponent',
+    props: ['productName']
+
 }
 </script>

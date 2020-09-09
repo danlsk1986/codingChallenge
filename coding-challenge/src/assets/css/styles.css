@@ -1,0 +1,188 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+
+  }
+
+  *{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:24px;
+    color:#616161;
+    letter-spacing:-0.15px;
+    line-height:48px;
+    text-align:left;
+  }
+
+  img{
+      max-width: 100%;
+  }
+  
+  .header{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+  
+  .header #logo {
+      padding: 20px;
+  }
+  
+  .userInfo {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      padding: 20px;
+      justify-content: space-between;
+  }
+  
+  .userName, .userPoints{
+      position: relative;
+      display: flex;      
+  }
+  
+  .userName{
+      margin-right: 20px;
+  }
+  
+  .userPoints{    
+      padding: 0 10px;
+      background:#ededed;
+      border-radius:100px;
+      width:103px;
+      height:48px; 
+      justify-content: space-between;
+  }
+  
+  #coin{
+      width: 24px;
+  }
+  
+
+  .hero{
+      position: relative;
+      display: flex;
+      width: 100%;     
+  }
+
+  .hero span{
+    position: absolute;
+    bottom: 48px;
+    left: 132px;
+    font-size: 64px;
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .menu{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      padding: 50px 0px;
+      margin: 0 132px;
+  }
+
+  .nbrProducts{
+      position: relative;
+      border-right: 1px solid #d9d9d9;
+      padding: 0 20px;
+  }
+
+  .filterProducts {
+      padding: 0 20px;
+      color:#a3a3a3;
+  }
+
+  .filterProducts button{
+    position: relative;
+    border-radius: 100px;
+    width:178px;
+    height:48px;
+    text-align: center;
+    color:#a3a3a3;
+    background-color:#ededed;
+    border: none;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .filterProducts button:first-child{
+      margin-left: 10px;
+  }
+
+  .filterProducts button:last-child{
+    margin-right: 0px;
+}
+
+  .filterProducts button:hover{
+    background:#0ad4fa;
+    color:#ffffff;
+  }
+
+  .selected{
+    background:#0ad4fa;
+    color:#ffffff;
+  }
+
+  .nxtPage{
+    position: relative;
+    left: 110px;
+    cursor: pointer;
+  }
+
+  .card-container{
+    position: relative;
+    margin: 0 132px;
+  }
+
+  .cards{
+    position: relative;
+    display: flex;
+    flex-direction: row;   
+  }
+
+  .card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background:#ffffff;
+    box-shadow:2px 2px 4px 0 rgba(0,0,0,0.10);
+    width:276px;
+    height:276px;
+    margin: 0 24px 24px 0;
+  }
+
+  .cardBuy{
+    position: relative;
+    top: 15px;
+    left: 200px;
+  }
+
+  .cardProduct{
+    position: relative;
+    margin: 0 auto;
+    width: 175px;
+    height: 142px;
+  }
+
+  .cardDescription{
+    margin: 0 0 18px 24px;
+  }
+
+  .cardDescription p{
+    position: relative;
+    margin: 0;
+    font-size: 16px;
+    line-height: 2;
+    text-align: left;
+    color:#a3a3a3;
+  }
+
+  .cardDescription p:last-child{
+    font-size: 18px;
+    color:#616161;
+  }
+
